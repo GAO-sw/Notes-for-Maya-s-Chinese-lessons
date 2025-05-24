@@ -1,0 +1,238 @@
+/* vocab_style.css */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6; /* Light tealish grey */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.main-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50; /* Dark blue-grey */
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Table of Contents Styles */
+#toc-container {
+    background-color: #ecf0f1; /* Light grey */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #bdc3c7; /* Mid grey border */
+}
+
+#toc-container h2 {
+    text-align: center;
+    color: #34495e; /* Darker blue-grey */
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bdc3c7;
+}
+
+#toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    column-count: 2; /* Display ToC in two columns for better space usage */
+    column-gap: 20px;
+}
+
+#toc-list li {
+    margin-bottom: 12px;
+}
+
+#toc-list a {
+    text-decoration: none;
+    color: #2980b9; /* Bright blue */
+    font-weight: 500;
+    padding: 5px 0;
+    display: block;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+#toc-list a:hover {
+    color: #1abc9c; /* Teal on hover */
+    padding-left: 5px; /* Slight indent on hover */
+}
+
+#toc-list .toc-subcategory-list { /* Sub-category list (for nouns) */
+    list-style: none;
+    padding-left: 20px; /* Indent sub-categories */
+    margin-top: 5px;
+}
+
+#toc-list .toc-subcategory-list li {
+    margin-bottom: 8px;
+}
+
+#toc-list .toc-subcategory-list a {
+    color: #3498db; /* Lighter blue for sub-links */
+    font-weight: normal;
+    font-size: 0.95em;
+}
+#toc-list .toc-subcategory-list a:hover {
+    color: #2ecc71; /* Green on hover */
+}
+
+
+/* Vocabulary Section Styles */
+.vocab-category {
+    margin-bottom: 40px;
+    padding-top: 20px; /* Space for anchor link */
+    border-top: 2px dashed #ecf0f1; /* Separator */
+}
+.vocab-category:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+
+.vocab-category > h2 { /* Category title: Noun, Verb, etc. */
+    background-color: #2980b9; /* Bright blue background */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+.vocab-subcategory > h3 { /* Subcategory title: About people, etc. */
+    color: #16a085; /* Teal */
+    border-bottom: 2px solid #1abc9c; /* Lighter teal */
+    padding-bottom: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+.vocab-list {
+    background-color: #fdfdfd;
+    border: 1px solid #eef;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.vocab-item {
+    padding: 12px 0;
+    border-bottom: 1px dotted #ddd;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.vocab-item:last-child {
+    border-bottom: none;
+}
+
+.vocab-item:hover {
+    background-color: #f5f8fa;
+}
+
+.chinese-vocab-term {
+    font-size: 19px;
+    font-weight: 500;
+    color: #34495e; /* Dark blue-grey */
+    display: block; /* Make it block to allow details to flow below */
+}
+
+.vocab-details {
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #555;
+    background-color: #f9f9f9; /* Slightly different bg for details */
+    padding: 10px;
+    border-radius: 4px;
+    border-left: 3px solid #3498db; /* Blue left border */
+}
+
+.vocab-details .pinyin {
+    color: #e74c3c; /* Red for pinyin */
+    font-style: italic;
+    margin-right: 8px;
+}
+
+.vocab-details .russian-vocab-term {
+    color: #2980b9; /* Blue for Russian */
+    font-weight: 500;
+}
+
+.vocab-details .explanation,
+.vocab-details .explanation-note {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed #eee;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+    white-space: pre-wrap; /* Preserve whitespace for explanations */
+}
+.vocab-details .explanation-note {
+    font-weight: bold;
+    color: #c0392b; /* Darker red for notes */
+    border-top: none;
+    padding-top: 0;
+}
+
+.vocab-details ol, .vocab-details ul {
+    padding-left: 25px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.vocab-direction-image {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.category-explanation {
+    background-color: #e8f6fd;
+    border-left: 4px solid #3498db;
+    padding: 10px 15px;
+    margin: 0 0 20px 0;
+    font-size: 0.95em;
+    color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+    #toc-list {
+        column-count: 1; /* Single column for ToC on smaller screens */
+    }
+    .main-container {
+        padding: 20px 15px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .vocab-category > h2 {
+        font-size: 20px;
+    }
+    .vocab-subcategory > h3 {
+        font-size: 17px;
+    }
+    .chinese-vocab-term {
+        font-size: 18px;
+    }
+    .vocab-details {
+        font-size: 15px;
+    }
+}
