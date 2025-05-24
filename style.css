@@ -69,7 +69,7 @@ h1 {
     padding-left: 5px; /* Slight indent on hover */
 }
 
-#toc-list .toc-subcategory-list { /* Sub-category list (for nouns) */
+#toc-list .toc-subcategory-list { /* Sub-category list (for nouns, etc.) */
     list-style: none;
     padding-left: 20px; /* Indent sub-categories */
     margin-top: 5px;
@@ -95,7 +95,7 @@ h1 {
     padding-top: 20px; /* Space for anchor link */
     border-top: 2px dashed #ecf0f1; /* Separator */
 }
-.vocab-category:first-child {
+.vocab-category:first-child { /* No top border for the very first category */
     border-top: none;
     padding-top: 0;
 }
@@ -194,14 +194,15 @@ h1 {
     margin-bottom: 8px;
 }
 
-.vocab-direction-image {
-    max-width: 150px;
+.vocab-direction-image, .radical-image { /* Added .radical-image */
+    max-width: 180px; /* Adjusted default for radical images */
     height: auto;
     display: block;
     margin: 15px auto;
     border: 1px solid #ccc;
     padding: 5px;
     border-radius: 4px;
+    background-color: #fff;
 }
 
 .category-explanation {
@@ -212,6 +213,29 @@ h1 {
     font-size: 0.95em;
     color: #2c3e50;
 }
+
+/* Styles for Radicals section */
+.radicals-definition {
+    background-color: #e9f7ef; /* Light green background */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #d1e7dd;
+}
+.radicals-definition p {
+    margin: 0;
+    font-size: 1em;
+    color: #0f5132; /* Dark green text */
+}
+.radical-item .chinese-vocab-term { /* Specific style for radical names */
+    font-weight: bold;
+    color: #582c83; /* Purple for radical name */
+}
+.radical-item .vocab-details .explanation {
+    border-top: none; /* No top border for radical explanation */
+    padding-top: 5px;
+}
+
 
 @media (max-width: 768px) {
     #toc-list {
