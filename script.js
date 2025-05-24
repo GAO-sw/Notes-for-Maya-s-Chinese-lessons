@@ -1,3 +1,4 @@
+// script.js (formerly vocab_script.js)
 document.addEventListener('DOMContentLoaded', () => {
     const tocList = document.getElementById('toc-list');
     const categories = document.querySelectorAll('.vocab-category');
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (targetElement) {
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
-                    block: 'start' // 'start' aligns the top of the target with the top of the visible area
+                    block: 'start'
                 });
             }
         });
